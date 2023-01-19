@@ -1,4 +1,4 @@
-## Script criado para automatizar a instalação de uma aplicação ASP.NET MVC; By: Anderson
+## Script criado para automatizar a instalaï¿½ï¿½o de uma aplicaï¿½ï¿½o ASP.NET MVC; By: Anderson
 
 function BaixaFerramentas {
 
@@ -13,7 +13,7 @@ $temp = 'c:\tmp'
         mkdir $CaminhoInstalacao
         mkdir $temp
 
-        powershell –c “(new-object System.Net.WebClient).DownloadFile(‘#Link do download do arquivo.zip contendo as ferramentas para instalação’,’C:\tmp\ferramentasdownload.zip’)”
+        powershell ï¿½c ï¿½(new-object System.Net.WebClient).DownloadFile(ï¿½#Link do download do arquivo.zip contendo as ferramentas para instalaï¿½ï¿½oï¿½,ï¿½C:\tmp\ferramentasdownload.zipï¿½)ï¿½
 
         Start-Sleep -Seconds 5
 
@@ -21,7 +21,7 @@ $temp = 'c:\tmp'
        
     }
     else {
-        powershell –c “(new-object System.Net.WebClient).DownloadFile(‘#Link do download do arquivo.zip contendo as ferramentas para instalação’,’C:\tmp\ferramentasdownload.zip’)”
+        powershell ï¿½c ï¿½(new-object System.Net.WebClient).DownloadFile(ï¿½#Link do download do arquivo.zip contendo as ferramentas para instalaï¿½ï¿½oï¿½,ï¿½C:\tmp\ferramentasdownload.zipï¿½)ï¿½
 
         Start-Sleep -Seconds 5
 
@@ -37,7 +37,7 @@ catch {
 
  echo 'Deseja voltar para o menu inicial ?'
    echo '(S) - Sim'
-   echo '(N) - Não'
+   echo '(N) - Nï¿½o'
 
    $Resposta = Read-Host
    
@@ -52,10 +52,10 @@ catch {
 } 
 function Menu {
   echo '================='
-  echo 'Instalador benner'
+  echo 'Instalador       '
   echo '================='
 
-  echo 'Selecione a opção desejada:'
+  echo 'Selecione a opï¿½ï¿½o desejada:'
   echo '---------------------------'
   echo '---------------------------'
   echo '(1) - Baixar Ferramentas'
@@ -93,7 +93,7 @@ function InstalaBserver{
 
  echo 'Deseja voltar para o menu inicial ?'
    echo '(S) - Sim'
-   echo '(N) - Não'
+   echo '(N) - Nï¿½o'
 
    $Resposta = Read-Host
    
@@ -111,7 +111,7 @@ function InstalaIntegrator{
 
  echo 'Deseja voltar para o menu inicial ?'
    echo '(S) - Sim'
-   echo '(N) - Não'
+   echo '(N) - Nï¿½o'
 
    $Resposta = Read-Host
    
@@ -125,14 +125,14 @@ function InstalaIntegrator{
    }
 }
 function InstalaIIS {
- #Forçando a execução em um nível mais avançado 
+ #Forï¿½ando a execuï¿½ï¿½o em um nï¿½vel mais avanï¿½ado 
  Set-ExecutionPolicy Unrestricted;
 
  Install-WindowsFeature -name Web-Server -IncludeManagementTools
 
  echo 'Deseja voltar para o menu inicial ?'
    echo '(S) - Sim'
-   echo '(N) - Não'
+   echo '(N) - Nï¿½o'
 
    $Resposta = Read-Host
    
@@ -146,7 +146,7 @@ function InstalaIIS {
    }
 }
 function CriarEstruturaWes {
-  #Forçando a execução em um nível mais avançado 
+  #Forï¿½ando a execuï¿½ï¿½o em um nï¿½vel mais avanï¿½ado 
   Set-ExecutionPolicy Unrestricted;
 
   #Tentando setar pt-BR
@@ -156,10 +156,10 @@ function CriarEstruturaWes {
   Set-WinSystemLocale pt-BR;
   Set-Culture pt-BR;
 
-  echo 'Informe um usuário administrador do ambiente:'
+  echo 'Informe um usuï¿½rio administrador do ambiente:'
   $UserName = Read-Host
 
-  echo 'Informe a senha do usuário:'
+  echo 'Informe a senha do usuï¿½rio:'
   $UserPass = Read-Host
 
   echo 'Informe o nome da Pool:'
@@ -208,7 +208,7 @@ function CriarEstruturaWes {
 
   echo 'Deseja voltar para o menu inicial ?'
    echo '(S) - Sim'
-   echo '(N) - Não'
+   echo '(N) - Nï¿½o'
 
    $Resposta = Read-Host
    
@@ -244,7 +244,7 @@ Start-Sleep -Seconds 5
 
 cls 
 
-echo 'Informe o diretório para instalação: '
+echo 'Informe o diretï¿½rio para instalaï¿½ï¿½o: '
 
 $CaminhoInstalacao = Read-Host
 
